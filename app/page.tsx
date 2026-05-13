@@ -29,7 +29,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-black via-gray-950 to-black text-white">
+    <main className="min-h-screen bg-linear-to-b from-black via-gray-950 to-black text-white overflow-x-hidden
+    lg:overflow-x-visible">
 
       {/* LOADER */}
       <Loader isVisible={loading} />
