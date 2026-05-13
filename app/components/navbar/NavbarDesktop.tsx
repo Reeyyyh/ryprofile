@@ -45,7 +45,7 @@ const navItems = [
     },
 ];
 
-export default function Navbar({
+export default function NavbarDesktop({
     open,
     setOpen,
 }: Props) {

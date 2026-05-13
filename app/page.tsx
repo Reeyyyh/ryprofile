@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 
 import Loader from "./components/Loader";
 
-import Navbar from "./components/Navbar";
+import NavbarDesktop from "./components/navbar/NavbarDesktop";
 import HeroSection from "./components/section/HeroSection";
 import AboutSection from "./components/section/AboutSection";
 import TechSection from "./components/section/TechSection";
 import ContactSection from "./components/section/ContactSection";
 import Footer from "./components/Footer";
 import ProjectsSection from "./components/section/ProjectSection";
+import NavbarMobile from "./components/navbar/NavbarMobile";
 
 export default function Home() {
 
@@ -34,10 +35,18 @@ export default function Home() {
       <Loader isVisible={loading} />
 
       {/* NAVBAR */}
-      <Navbar
-        open={sidebarOpen}
-        setOpen={setSidebarOpen}
-      />
+      {/* DESKTOP NAVBAR */}
+      <div className="hidden lg:block">
+        <NavbarDesktop
+          open={sidebarOpen}
+          setOpen={setSidebarOpen}
+        />
+      </div>
+
+      {/* MOBILE NAVBAR */}
+      <div className="block lg:hidden">
+        <NavbarMobile />
+      </div>
 
 
       {/* MAIN CONTENT */}
@@ -80,7 +89,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <Footer/>
+        <Footer />
 
       </div>
     </main>
