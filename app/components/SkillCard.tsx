@@ -26,11 +26,15 @@ export default function SkillCard({
             <div
                 className="
                     relative
-                    w-32
-                    h-32
-                    flex
-                    items-center
-                    justify-center
+        w-16
+        h-16
+        sm:w-20
+        sm:h-20
+        md:w-32
+        md:h-32
+        flex
+        items-center
+        justify-center
                 "
             >
 
@@ -71,8 +75,10 @@ export default function SkillCard({
                         {/* ICON */}
                         <Icon
                             className={`
-                                text-4xl
-                                ${color}
+                                text-xl
+        sm:text-2xl
+        md:text-4xl
+        ${color}
                             `}
                         />
 
@@ -83,10 +89,13 @@ export default function SkillCard({
             {/* NAME */}
             <p
                 className="
-                    mt-4
-                    text-sm
-                    font-medium
-                    text-gray-400
+                    mt-2
+        md:mt-4
+        text-[10px]
+        sm:text-xs
+        md:text-sm
+        font-medium
+        text-gray-400
                 "
             >
                 {name}

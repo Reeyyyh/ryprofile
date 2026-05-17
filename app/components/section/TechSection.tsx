@@ -51,11 +51,9 @@ export default function TechSection() {
             <div
                 className="
                     grid
-                    grid-cols-2
-                    sm:grid-cols-3
-                    md:grid-cols-4
-                    lg:grid-cols-5
-                    gap-6
+        grid-cols-5
+        gap-3
+        md:gap-6
                 "
             >
                 {skills.map((skill, i) => (
